@@ -1,12 +1,16 @@
-# Dependencies
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
 node_modules/
 
 # Expo
 .expo/
 dist/
 web-build/
+expo-env.d.ts
 
-# Native builds
+# Native
+.kotlin/
 *.orig.*
 *.jks
 *.p8
@@ -14,32 +18,48 @@ web-build/
 *.key
 *.mobileprovision
 
-# Environment variables
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# Windows
+Thumbs.db
+
+# Environment variables (SECURITY: never commit secrets)
 .env
 .env.local
-.env.*.local
+.env*.local
+.env.development
+.env.production
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # Testing
 coverage/
 
-# TypeScript
+# typescript
 *.tsbuildinfo
 
-# Temporary files
-*.tmp
-*.temp
+# generated native folders
+/ios
+/android
+
+# Credentials (SECURITY)
+*.credentials
+*.secret
+google-services.json
+GoogleService-Info.plist
+
+# Claude Code
+.claude/
